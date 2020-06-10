@@ -3,7 +3,7 @@
 	width: 33px;
 	border: solid 1px silver;
 	text-align: center;
-	
+	font-size: 90%
 }
 #cnr {
 	display: inline-block;
@@ -11,8 +11,9 @@
 	border: solid 1px silver;
 	text-align: center;
 	margin-left: 3px;
-	height: 27px;
-	padding: 5px 3px 0 3px;
+	height: 24px;
+	padding: 9px 3px 0 3px;
+	font-size: 90%;
 }
 #eval, #lis {
 	width: 80px;
