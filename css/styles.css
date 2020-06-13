@@ -37,7 +37,7 @@ body {
 	overflow: auto;
 	padding: 2px 10px 2px 10px;
 	border: 1px solid silver;
-	float: left;
+	display: inline-block;
 }
 .lng {
 	display: inline-block;
@@ -46,8 +46,15 @@ body {
 	text-align: justify;
 	background-color: #ffffff;
 	position: relative;
-	margin: 10px 7px 3px 70px;
+	margin-top: 10px; 
+}
+.lng:first-child {
 	float: left;
+	margin-left: 5%; 
+}
+.lng:last-child {
+	float: right;
+	margin-right: 5%; 
 }
 h2 {
 	text-align: center;
@@ -56,6 +63,7 @@ h2 {
 	margin: 7px 0 7px 0;
 	color: #546877;
 }
+
 .desc p:hover {
 	color: #000000;
 }
@@ -73,11 +81,11 @@ p {
 
 .exp {
 	position: relative;
-    display: inline-block;
-    width: 590px;
-    float: left;
-	margin-left: 48px;
-	margin-bottom: 10px;
+    /* display: inline-block; */
+    width: 600px;
+    /* float: left; */
+	margin: 10px auto;
+	height: 250px;
 }
 .ex{
 	width: 500px;
@@ -85,10 +93,10 @@ p {
 }
 .res {
 	position: relative;
-    display: inline-block;
-    width: 590px;
-    margin-left: 45px;
-	margin-bottom: 10px;
+    /* display: inline-block; */
+    width: 600px;
+	height: 390px;
+    margin: 10px auto;
 }
 .frm {
 	padding: 5px 0 5px 0;
@@ -96,20 +104,26 @@ p {
 
 .wrk {
 	position: relative;
-	display: inline-block;
 	width: 100%;
 }
 .descm {
 	position: relative;
-	display: inline-block;
 	width: 100%;
+	margin: 90px auto 0 auto;
+	height: 250px;
 }
 header {
-	background: #85a2b9;
+	background: #85a2b9e0;
 	padding: 12px 0px;
 	text-align: center;
 	box-shadow: 0 0 10px 2px rgba(0,0,0,.35);
 	-webkit-box-shadow: rgba(0,0,0,.35) 0 0 10px 2px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	transition: top 0.2s; 
 }
 
 h1 {
@@ -232,6 +246,11 @@ nav a:hover {
 	float: right;
 	width: 42%;
 }
+.settings {
+	border: 1px solid silver;
+	padding: 7px 0 7px 0;
+	background-color: rgb(239, 239, 239);
+}
 
 .arrow {
 	border: solid #546877;
@@ -241,7 +260,35 @@ nav a:hover {
 	 transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+main {
+	margin-bottom: 5%;
+}
 footer p {
 	font-size: 14px;
 	text-align: center;
+	margin-bottom: 0;
+	color: #ffffff;
+}
+footer {
+	background-color: #85a2b9e0;
+	position: fixed;
+	bottom: -100px;
+	left: 0;
+	width: 100%;
+	transition: bottom 0.2s; 
+}
+footer a {
+	text-decoration: none;
+	display: inline-block;	
+	color: #ffffff;
+	margin-left: 0;
+	padding-right: 3px;
+	text-indent: 5px;
+}
+footer a:hover {
+	background-color: #a1b4c3;	
+}
+
+#new_e {
+	margin-left: 10px;
 }
