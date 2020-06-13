@@ -11,7 +11,7 @@
 	</head>
 	
 	<body onload="onLoad()">
-		<header>
+		<header id="navi">
 			<nav><a href="https://ames.kpi.ua/uk/glavnaya/">Back</a></nav>
 			
 			<h1>Clipped audio quality subjective evaluation</h1>
@@ -40,127 +40,128 @@
 					</div>
 				</div>
 			</div>
-			<hr>
+			
 			<div class="wrk">
 				<div class="exp">
 					<h2 id="e">Listen and evaluate</h2>	
 					<form class="frm">	
 						<div class="ex">
-							<div class="dropdown">
-								<div class="dropbtn" id="selm"><span id="sel_m">Music	</span><i class="arrow"></i></div>
-								<div class="dropdown-content" id="dr_m">
-									<div class="drp">
-										<input type="radio" id="p1_select" name="res" onclick="ploType()" checked>
-										<label for="p1_select">Popular 1</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="p2_select" name="res" onclick="ploType()" >
-										<label for="p2_select">Popular 2</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="p3_select" name="res" onclick="ploType()" >
-										<label for="p3_select">Popular 3</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="p4_select" name="res" onclick="ploType()" >
-										<label for="p4_select">Popular 4</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="c1_select" name="res" onclick="ploType()" >
-										<label for="c1_select">Classical 1</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="c2_select" name="res" onclick="ploType()" >
-										<label for="c2_select">Classical 2</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="c3_select" name="res" onclick="ploType()" >
-										<label for="c3_select">Classical 3</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="c4_select" name="res" onclick="ploType()" >
-										<label for="c4_select">Classical 4</label>
-									</div>
-								</div>
-							</div>
-							
-							<div class="dropdown">
-								<div class="dropbtn" id="sels"><span id="sel_s">Speech	</span><i class="arrow"></i></div>
-								<div class="dropdown-content" id="dr_s">
-									<div class="drp">
-										<input type="radio" id="f1_select" name="res" onclick="ploType()" >
-										<label for="f1_select">Female 1</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="f2_select" name="res" onclick="ploType()">
-										<label for="f2_select">Female 2</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="f3_select" name="res" onclick="ploType()">
-										<label for="f3_select">Female 3</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="f4_select" name="res" onclick="ploType()">
-										<label for="f4_select">Female 4</label>
-									</div>
-									<div class="drp">
-										<input type="radio" id="m1_select" name="res" onclick="ploType()" >
-										<label for="m1_select">Male 1</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="m2_select" name="res" onclick="ploType()">
-										<label for="m2_select">Male 2</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="m3_select" name="res" onclick="ploType()">
-										<label for="m3_select">Male 3</label>
-									</div>
-									<div class="drp"> 
-										<input type="radio" id="m4_select" name="res" onclick="ploType()">
-										<label for="m4_select">Male 4</label>
+							<div class="settings">
+								<div class="dropdown">
+									<div class="dropbtn" id="selm"><span id="sel_m">Music	</span><i class="arrow"></i></div>
+									<div class="dropdown-content" id="dr_m">
+										<div class="drp">
+											<input type="radio" id="p1_select" name="res" onclick="ploType()" checked>
+											<label for="p1_select">Popular 1</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="p2_select" name="res" onclick="ploType()" >
+											<label for="p2_select">Popular 2</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="p3_select" name="res" onclick="ploType()" >
+											<label for="p3_select">Popular 3</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="p4_select" name="res" onclick="ploType()" >
+											<label for="p4_select">Popular 4</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="c1_select" name="res" onclick="ploType()" >
+											<label for="c1_select">Classical 1</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="c2_select" name="res" onclick="ploType()" >
+											<label for="c2_select">Classical 2</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="c3_select" name="res" onclick="ploType()" >
+											<label for="c3_select">Classical 3</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="c4_select" name="res" onclick="ploType()" >
+											<label for="c4_select">Classical 4</label>
+										</div>
 									</div>
 								</div>
+								
+								<div class="dropdown">
+									<div class="dropbtn" id="sels"><span id="sel_s">Speech	</span><i class="arrow"></i></div>
+									<div class="dropdown-content" id="dr_s">
+										<div class="drp">
+											<input type="radio" id="f1_select" name="res" onclick="ploType()" >
+											<label for="f1_select">Female 1</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="f2_select" name="res" onclick="ploType()">
+											<label for="f2_select">Female 2</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="f3_select" name="res" onclick="ploType()">
+											<label for="f3_select">Female 3</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="f4_select" name="res" onclick="ploType()">
+											<label for="f4_select">Female 4</label>
+										</div>
+										<div class="drp">
+											<input type="radio" id="m1_select" name="res" onclick="ploType()" >
+											<label for="m1_select">Male 1</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="m2_select" name="res" onclick="ploType()">
+											<label for="m2_select">Male 2</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="m3_select" name="res" onclick="ploType()">
+											<label for="m3_select">Male 3</label>
+										</div>
+										<div class="drp"> 
+											<input type="radio" id="m4_select" name="res" onclick="ploType()">
+											<label for="m4_select">Male 4</label>
+										</div>
+									</div>
+								</div>
+								<div class="tdur">
+									<label for="dur">Set audio duration (sec):</label><br><span id="dr"></span>
+									<input type="range" min="1" step="1" max="15" name="tim_l" id="dur" value="15" oninput="durSp()">
+								</div>
 							</div>
-							<div class="tdur">
-							<label for="dur">Set audio duration (sec):</label><br><span id="dr"></span>
-							<input type="range" min="1" step="1" max="15" name="tim_l" id="dur" value="15" oninput="durSp()">
-							</div>
-							<br><hr>
+							<br>
 							<div class="oper">
-							<audio id="player"></audio>
-							<label for="rate">Rating (MOS):</label><br><span id="rt"></span>
-							<input type="range" min="1" step="0.1" max="5" name="rates" id="rate" value="5" oninput="rateSp()" disabled>
-							<input type="button" value="Evaluate" onclick="rateCmt()" id="eval" disabled>
-							<input type="button" value="Start" onclick="lsnCmt()" id="lis"><span id="cnr">left</span> 
+								<audio id="player"></audio>
+								<label for="rate">Rating (MOS):</label><br><span id="rt"></span>
+								<input type="range" min="1" step="0.1" max="5" name="rates" id="rate" value="5" oninput="rateSp()" disabled>
+								<input type="button" value="Evaluate" onclick="rateCmt()" id="eval" disabled>
+								<input type="button" value="Start" onclick="lsnCmt()" id="lis"><span id="cnr">left</span> 
 							</div>
-							<hr>
-									<input type="button" value="New experiment" onclick="newExp()" id = "new_e" disabled>
+							<input type="button" value="New experiment" onclick="newExp()" id = "new_e" disabled>
 							
-							</div>	
-								</form>
-							</div>
-							
-							
-							
-							
-							<div class="res">
-								<h2 id="r">Check the results</h2>
-								<div class="frm">	
-									
-									<div class="r_m">
-										<canvas id="legend" width="105" height="50"></canvas>
-										<canvas id="axis_y" width="42" height="280"></canvas><canvas id="graph" width="500" height="250"></canvas> 
-										<br>
-										<canvas id="axis_x" width="570" height="42"></canvas>
-									</div>
-								</div>
-							</div>
+						</div>	
+					</form>
+				</div>
+				
+				
+				
+				
+				<div class="res">
+					<h2 id="r">Check the results</h2>
+					<div class="frm">	
+						
+						<div class="r_m">
+							<canvas id="legend" width="105" height="50"></canvas>
+							<canvas id="axis_y" width="42" height="280"></canvas><canvas id="graph" width="500" height="250"></canvas> 
+							<br>
+							<canvas id="axis_x" width="570" height="42"></canvas>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
-		<footer>
-		<hr>
-		<p>Розробник: Ігор Котвицький, кафедра Акустичних та мультимедійних електронних систем (АМЕС) НТУУ "КПІ ім. Ігоря Сікорського", Київ, Україна</p>
-<p>Developer: Igor Kotvytskyi, Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU "Igor Sikorsky KPI", Kyiv, Ukraine</p>	
+		<br>
+		<footer id="foot">
+			<p>Розробник: Ігор Котвицький, <a href="https://ames.kpi.ua/uk/glavnaya/">кафедра Акустичних та мультимедійних електронних систем (АМЕС) НТУУ "КПІ ім. Ігоря Сікорського", Київ, Україна</a></p>
+			<p>Developer: Igor Kotvytskyi, <a href="https://ames.kpi.ua/uk/glavnaya/">Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU "Igor Sikorsky KPI", Kyiv, Ukraine</a></p>	
 		</footer>
 		
 		
