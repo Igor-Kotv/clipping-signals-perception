@@ -47,7 +47,7 @@ function onLoad() {
 		ax.fillText(x[k],(k+1)*42+40,15);
 	};	
 	ax.font = "20px Times New Roman";
-	ax.fillText('k (dB)', 250, 35);
+	ax.fillText('k (dB)', 270, 35);
 	
 	//axis Y
 	

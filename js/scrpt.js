@@ -18,6 +18,23 @@ var mwr = []; //for localStorage
 var mwe = []; 
 
 
+/* Header and footer*/
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navi").style.top = "0";
+	document.getElementById("foot").style.bottom = "-100px";
+  } else {
+    document.getElementById("navi").style.top = "-100px";
+	document.getElementById("foot").style.bottom = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+
+
 for (j = 0; j<=localStorage.length-1; j++) {
 	mwr.push(parseFloat(localStorage.getItem(j)));	//calling data
 };
