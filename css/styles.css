@@ -11,8 +11,8 @@
 	border: solid 1px silver;
 	text-align: center;
 	margin-left: 3px;
-	height: 24px;
-	padding: 9px 3px 0 3px;
+	height: 23px;
+	padding: 7px 3px 0 3px;
 	font-size: 90%;
 }
 #eval, #lis {
@@ -269,6 +269,9 @@ footer p {
 	margin-bottom: 0;
 	color: #ffffff;
 }
+footer p:last-child {
+	margin-bottom: 7px;
+}
 footer {
 	background-color: #85a2b9e0;
 	position: fixed;
@@ -290,5 +293,6 @@ footer a:hover {
 }
 
 #new_e {
-	margin-left: 10px;
+	margin: 27px auto;
+	display: block;
 }
