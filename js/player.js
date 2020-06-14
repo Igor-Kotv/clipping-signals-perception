@@ -21,7 +21,7 @@ const c1 = ["audio/clas1_0.wav", "audio/clas1_2.wav", "audio/clas1_4.wav",
 	"audio/clas1_6.wav", "audio/clas1_8.wav", "audio/clas1_10.wav",
 	"audio/clas1_12.wav", "audio/clas1_14.wav", "audio/clas1_16.wav", "audio/clas1_18.wav",
 "audio/clas1_20.wav"];
-const c2 = ["audio/pop2_0.wav", "audio/clas2_2.wav", "audio/clas2_4.wav",
+const c2 = ["audio/clas2_0.wav", "audio/clas2_2.wav", "audio/clas2_4.wav",
 	"audio/clas2_6.wav", "audio/clas2_8.wav", "audio/clas2_10.wav",
 	"audio/clas2_12.wav", "audio/clas2_14.wav", "audio/clas2_16.wav", "audio/clas2_18.wav",
 "audio/clas2_20.wav"];
