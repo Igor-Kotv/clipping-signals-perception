@@ -307,3 +307,42 @@ function oldPlot() {
 	
 };	
 
+//language selector
+function lnType(){
+	
+	if (document.getElementById('ukr_select').checked) {
+		
+		document.getElementById('sel_ln').innerHTML = 'Укр	';
+		document.getElementById('eng').style.display = 'none';
+		document.getElementById('ukr').style.display = 'inline-block';
+		document.getElementById('hdr').innerHTML = 'Оцінювання сприйняття кліпованого звуку';
+		document.getElementById('bck').innerHTML = 'Назад';
+		document.getElementById('ftr').innerHTML = 'Розробник: Ігор Котвицький, ';
+		document.getElementById('ftra').innerHTML = 'кафедра Акустичних та мультимедійних електронних систем (АМЕС) НТУУ "КПІ ім. Ігоря Сікорського", Київ, Україна';
+		document.getElementById('e').innerHTML = 'Слухайте та оцінюйте';
+		document.getElementById('r').innerHTML = 'Перегляньте результат';
+		document.getElementById('durln').innerHTML = 'Час прослуховування (сек)';
+		document.getElementById('rtln').innerHTML = 'Оцінка (MOS)';
+		document.getElementById('lis').value = 'Почати';
+		document.getElementById('eval').value = 'Оцінити';
+		document.getElementById('new_e').value = 'Новий експеримент';
+	}
+	else if (document.getElementById('en_select').checked) {
+		
+		document.getElementById('sel_ln').innerHTML = 'En	';
+		document.getElementById('eng').style.display = 'inline-block';
+		document.getElementById('ukr').style.display = 'none';
+		document.getElementById('hdr').innerHTML = 'Clipped audio perception evaluation';
+		document.getElementById('bck').innerHTML = 'Back';
+		document.getElementById('ftr').innerHTML = 'Developer: Igor Kotvytskyi, ';
+		document.getElementById('ftra').innerHTML = 'Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU "Igor Sikorsky KPI", Kyiv, Ukraine';
+		document.getElementById('e').innerHTML = 'Listen and evaluate';
+		document.getElementById('r').innerHTML = 'Check the results';
+		document.getElementById('durln').innerHTML = 'Set audio duration (sec)';
+		document.getElementById('rtln').innerHTML = 'Rating (MOS)';
+		document.getElementById('lis').value = 'Start';
+		document.getElementById('eval').value = 'Evaluate';
+		document.getElementById('new_e').value = 'New experiment';
+		
+	}
+}
