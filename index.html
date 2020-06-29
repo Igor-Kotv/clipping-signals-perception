@@ -12,21 +12,22 @@
 	
 	<body onload="onLoad()">
 		<header id="navi">
-			<nav><a href="https://ames.kpi.ua/uk/yakist-muzichnih-signaliv/" id="bck">Back</a></nav>
+			<nav><a href="https://ames.kpi.ua/uk/yakist-muzichnih-signaliv/" id="bck">Назад</a></nav>
 			
-			<h1 id="hdr">Clipped audio perception evaluation</h1>
+			<h1 id="hdr">Оцінювання сприйняття кліпованого звуку</h1>
 			
 			<div class="dropdown_l">
 				<div class="dropbtn_l" id="lngw"><span id="sel_ln">En	</span><i class="arrow"></i></div>
 				<div class="dropdown-content_l" id="dr_l">
 					<div class="drp_l">
-						<input type="radio" id="ukr_select" name="res" onclick="lnType()">
-						<label for="ukr_select">Укр</label>
-					</div>
-					<div class="drp_l">
-						<input type="radio" id="en_select" name="res" onclick="lnType()" checked>
+						<input type="radio" id="en_select" name="res" onclick="lnType()" >
 						<label for="en_select">En</label>
 					</div>
+					<div class="drp_l">
+						<input type="radio" id="ukr_select" name="res" onclick="lnType()"checked>
+						<label for="ukr_select">Укр</label>
+					</div>
+					
 				</div>
 				
 			</div>
@@ -57,7 +58,7 @@
 				
 				<div class="wrk">
 					<div class="exp">
-						<h2 id="e">Listen and evaluate</h2>	
+						<h2 id="e">Слухайте та оцінюйте</h2>	
 						<form class="frm">	
 							<div class="ex">
 								<div class="settings">
@@ -137,21 +138,22 @@
 										</div>
 									</div>
 									<div class="tdur">
-										<label for="dur" id="durln">Set audio duration (sec)</label><br><span id="dr"></span>
+										<label for="dur" id="durln">Час прослуховування (сек)</label><br><span id="dr"></span>
 										<input type="range" min="1" step="1" max="15" name="tim_l" id="dur" value="15" oninput="durSp()">
 									</div>
 								</div>
 								<br>
 								<div class="oper">
 									<audio id="player"></audio><span id="cnr">left</span>
-									<input type="button" value="Start" onclick="lsnCmt()" id="lis">
-									<input type="button" value="Evaluate" onclick="rateCmt()" id="eval" disabled> 
+									<input type="button" value="Почати" onclick="lsnCmt()" id="lis">
+									
 									<div class="ev">
-										<label for="rate" id="rtln">Rating (MOS)</label><br><span id="rt"></span>
+										<label for="rate" id="rtln">Оцінка (MOS)</label><br><span id="rt"></span>
 										<input type="range" min="1" step="0.1" max="5" name="rates" id="rate" value="5" oninput="rateSp()" disabled>
 									</div>
+									<input type="button" value="Оцінити" onclick="rateCmt()" id="eval" disabled> 
 								</div>
-								<input type="button" value="New experiment" onclick="newExp()" id = "new_e" disabled>
+								<input type="button" value="Новий експеримент" onclick="newExp()" id = "new_e" disabled>
 								
 							</div>	
 						</form>
@@ -161,7 +163,7 @@
 					
 					
 					<div class="res">
-						<h2 id="r">Check the results</h2>
+						<h2 id="r">Перегляньте результат</h2>
 						<div class="frm">	
 							
 							<div class="r_m">
@@ -177,7 +179,7 @@
 		</main>
 		<br>
 		<footer id="foot">
-			<p id="ftr">Developer: Igor Kotvytskyi, </p><a href="https://ames.kpi.ua/uk/glavnaya/" id="ftra">Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU "Igor Sikorsky KPI", Kyiv, Ukraine</a>	
+			<p id="ftr">Розробник: Ігор Котвицький, </p><a href="https://ames.kpi.ua/uk/glavnaya/" id="ftra">кафедра Акустичних та мультимедійних електронних систем (АМЕС) НТУУ "КПІ ім. Ігоря Сікорського", Київ, Україна</a>	
 		</footer>
 		
 		
