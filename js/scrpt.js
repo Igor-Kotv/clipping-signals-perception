@@ -10,7 +10,7 @@ var x = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]; //clipping levels
 var n_dist = 11; //amount of clipping files
 var c = 0;
 var cl = [];
-var r = new Array(11).fill(0);;	//rate	
+var r = new Array(11).fill(0);;	//rate array
 var avg = [];
 var r1 = [];
 //getting data for averaging	
@@ -18,18 +18,18 @@ var mwr = []; //for localStorage
 var mwe = []; 
 
 
-/* Header and footer*/
+/* Header */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navi").style.top = "0";
-	document.getElementById("foot").style.bottom = "-100px";
-  } else {
-    document.getElementById("navi").style.top = "-100px";
-	document.getElementById("foot").style.bottom = "0px";
-  }
-  prevScrollpos = currentScrollPos;
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		document.getElementById("navi").style.top = "0";
+	} 
+	else {
+		
+		document.getElementById("navi").style.top = "-100px";
+	}
+	prevScrollpos = currentScrollPos;
 }
 
 
@@ -86,7 +86,7 @@ function rateCmt() {
 		document.getElementById("e").style.color = '#d3d3d3'; //heading color change
 		document.getElementById("r").style.color = '#546877'; //heading color change
 		
-	
+		
 		
 		//memory storing
 		var rmem = r; //asigning for averaging
@@ -312,7 +312,7 @@ function lnType(){
 	
 	if (document.getElementById('ukr_select').checked) {
 		
-		document.getElementById('sel_ln').innerHTML = 'Укр	';
+		document.getElementById('sel_ln').innerHTML = 'En	';
 		document.getElementById('eng').style.display = 'none';
 		document.getElementById('ukr').style.display = 'inline-block';
 		document.getElementById('hdr').innerHTML = 'Оцінювання сприйняття кліпованого звуку';
@@ -329,7 +329,7 @@ function lnType(){
 	}
 	else if (document.getElementById('en_select').checked) {
 		
-		document.getElementById('sel_ln').innerHTML = 'En	';
+		document.getElementById('sel_ln').innerHTML = 'Укр	';
 		document.getElementById('eng').style.display = 'inline-block';
 		document.getElementById('ukr').style.display = 'none';
 		document.getElementById('hdr').innerHTML = 'Clipped audio perception evaluation';
