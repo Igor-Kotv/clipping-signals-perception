@@ -21,8 +21,8 @@
         "score": "Score (MOS)",
         "music": "Music",
         "speech": "Speech",
-        "start": "Start",
-        "estimate": "Estimate"
+        "start": "Listen",
+        "estimate": "Evaluate"
     }
 
 
