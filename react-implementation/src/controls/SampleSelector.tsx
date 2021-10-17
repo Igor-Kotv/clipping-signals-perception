@@ -1,0 +1,107 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import { musicSamples, speechSamples } from "../data";
+import DropDownMenu from "./DropDownMenu";
+import {
+  onSampleDurationSetting,
+  onSampleTypeSetting,
+  selectExperimentStatus,
+} from "./slice";
+import Slider from "./Slider";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #efefef;
+  border: 1px solid silver;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 45rem;
+  user-select: none;
+`;
+
+const RadioContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+`;
+
+const Radio = styled.input`
+  margin: auto 0 auto 0;
+`;
+
+const CathegoryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SampleSelector = () => {
+  const { t } = useTranslation();
+  const [sampleDuration, setSampleDuration] = useState<number>(15);
+  const [musicSelected, setMusicSelected] = useState<boolean>(true);
+  const [speechSelected, setSpeechSelected] = useState<boolean>(false);
+  const experimentStarted = useSelector(selectExperimentStatus);
+  const dispatch = useDispatch();
+  return (
+    <Container>
+      <CathegoryContainer>
+        <RadioContainer>
+          <Radio
+            id="music-radio"
+            type="radio"
+            disabled={experimentStarted}
+            onChange={() => {
+              setMusicSelected(true);
+              setSpeechSelected(false);
+              dispatch(onSampleTypeSetting("music"));
+            }}
+            checked={musicSelected}
+          />
+          <label htmlFor="music-radio">{t("controls.music")}</label>
+        </RadioContainer>
+        <DropDownMenu
+          disabled={experimentStarted || !musicSelected}
+          data={musicSamples}
+        />
+      </CathegoryContainer>
+      <CathegoryContainer>
+        <RadioContainer>
+          <Radio
+            type="radio"
+            disabled={experimentStarted}
+            onChange={() => {
+              setMusicSelected(false);
+              setSpeechSelected(true);
+              dispatch(onSampleTypeSetting("speech"));
+            }}
+            checked={speechSelected}
+            id="speech-radio"
+          />
+          <label htmlFor="speech-radio">{t("controls.speech")}</label>
+        </RadioContainer>
+        <DropDownMenu
+          disabled={experimentStarted || !speechSelected}
+          data={speechSamples}
+        />
+      </CathegoryContainer>
+      <Slider
+        onInput={setSampleDuration}
+        label={t("controls.sampleDuration")}
+        maxValue={15}
+        minValue={1}
+        value={sampleDuration}
+        disabled={experimentStarted}
+        onMouseUp={() => dispatch(onSampleDurationSetting(sampleDuration))}
+      />
+    </Container>
+  );
+};
+
+export default SampleSelector;
