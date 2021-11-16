@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/static/js/main.44fa3d7f.chunk.js",
-    "main.js.map": "/static/js/main.44fa3d7f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.98eb0fdb.js",
-    "runtime-main.js.map": "/static/js/runtime-main.98eb0fdb.js.map",
-    "static/css/2.c490997a.chunk.css": "/static/css/2.c490997a.chunk.css",
-    "static/js/2.5565b66d.chunk.js": "/static/js/2.5565b66d.chunk.js",
-    "static/js/2.5565b66d.chunk.js.map": "/static/js/2.5565b66d.chunk.js.map",
-    "static/js/3.46f217a1.chunk.js": "/static/js/3.46f217a1.chunk.js",
-    "static/js/3.46f217a1.chunk.js.map": "/static/js/3.46f217a1.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.c490997a.chunk.css.map": "/static/css/2.c490997a.chunk.css.map",
-    "static/css/main.2ae47eeb.chunk.css.map": "/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.5565b66d.chunk.js.LICENSE.txt": "/static/js/2.5565b66d.chunk.js.LICENSE.txt"
+    "main.css": "/clipping-signals-perception/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/clipping-signals-perception/static/js/main.44fa3d7f.chunk.js",
+    "main.js.map": "/clipping-signals-perception/static/js/main.44fa3d7f.chunk.js.map",
+    "runtime-main.js": "/clipping-signals-perception/static/js/runtime-main.c01dd412.js",
+    "runtime-main.js.map": "/clipping-signals-perception/static/js/runtime-main.c01dd412.js.map",
+    "static/css/2.c490997a.chunk.css": "/clipping-signals-perception/static/css/2.c490997a.chunk.css",
+    "static/js/2.7fbb71d3.chunk.js": "/clipping-signals-perception/static/js/2.7fbb71d3.chunk.js",
+    "static/js/2.7fbb71d3.chunk.js.map": "/clipping-signals-perception/static/js/2.7fbb71d3.chunk.js.map",
+    "static/js/3.46f217a1.chunk.js": "/clipping-signals-perception/static/js/3.46f217a1.chunk.js",
+    "static/js/3.46f217a1.chunk.js.map": "/clipping-signals-perception/static/js/3.46f217a1.chunk.js.map",
+    "index.html": "/clipping-signals-perception/index.html",
+    "static/css/2.c490997a.chunk.css.map": "/clipping-signals-perception/static/css/2.c490997a.chunk.css.map",
+    "static/css/main.2ae47eeb.chunk.css.map": "/clipping-signals-perception/static/css/main.2ae47eeb.chunk.css.map",
+    "static/js/2.7fbb71d3.chunk.js.LICENSE.txt": "/clipping-signals-perception/static/js/2.7fbb71d3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.98eb0fdb.js",
+    "static/js/runtime-main.c01dd412.js",
     "static/css/2.c490997a.chunk.css",
-    "static/js/2.5565b66d.chunk.js",
+    "static/js/2.7fbb71d3.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
     "static/js/main.44fa3d7f.chunk.js"
   ]
