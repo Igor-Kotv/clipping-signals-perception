@@ -18,17 +18,18 @@ const Container = styled.div`
     "description controls"
     "footer footer";
   height: 100vh;
+  gap: 1em;
 `;
 
 const DescriptionContainer = styled.div`
   grid-area: description;
   height: auto;
-  padding-left: 10rem;
+  padding-left: 10em;
 `;
 
 const ControlsContainer = styled.div`
   grid-area: controls;
-  padding-right: 10rem;
+  padding-right: 10em;
 `;
 
 const Header = styled.div`

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { musicSamples, speechSamples } from "../data";
-import DropDownMenu from "./DropDownMenu";
+import DropdownMenu from "./DropdownMenu";
 import {
   onSampleDurationSetting,
   onSampleTypeSetting,
@@ -66,7 +66,7 @@ const SampleSelector = () => {
           />
           <label htmlFor="music-radio">{t("controls.music")}</label>
         </RadioContainer>
-        <DropDownMenu
+        <DropdownMenu
           disabled={experimentStarted || !musicSelected}
           data={musicSamples}
         />
@@ -86,7 +86,7 @@ const SampleSelector = () => {
           />
           <label htmlFor="speech-radio">{t("controls.speech")}</label>
         </RadioContainer>
-        <DropDownMenu
+        <DropdownMenu
           disabled={experimentStarted || !speechSelected}
           data={speechSamples}
         />

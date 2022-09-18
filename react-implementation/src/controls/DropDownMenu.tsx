@@ -10,7 +10,7 @@ interface Props {
   disabled?: boolean;
 }
 
-const DropDownTitle = styled.span`
+const DropdownTitle = styled.span`
   display: inline-block;
   width: 8rem;
   text-align: left;
@@ -18,7 +18,11 @@ const DropDownTitle = styled.span`
   user-select: none;
 `;
 
-const DropDownMenu: React.FC<Props> = ({ data, disabled }: Props) => {
+const DropdownItem = styled(Dropdown.Item)`
+  -webkit-user-drag: none;
+`;
+
+const DropdownMenu: React.FC<Props> = ({ data, disabled }: Props) => {
   const dispatch = useDispatch();
   const [selectedSampleName, setSelectedSampleName] = useState<string>(
     data[0].name
@@ -37,23 +41,23 @@ const DropDownMenu: React.FC<Props> = ({ data, disabled }: Props) => {
         disabled={disabled}
         id="dropdown-basic"
       >
-        <DropDownTitle>{selectedSampleName}</DropDownTitle>
+        <DropdownTitle>{selectedSampleName}</DropdownTitle>
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {data.map((item) => (
-          <Dropdown.Item
+          <DropdownItem
             key={item.name}
             onClick={() => {
               setSelectedSampleName(item.name);
               dispatch(selectSample(item.name));
             }}
           >
-            <DropDownTitle>{item.name}</DropDownTitle>
-          </Dropdown.Item>
+            <DropdownTitle>{item.name}</DropdownTitle>
+          </DropdownItem>
         ))}
       </Dropdown.Menu>
     </Dropdown>
   );
 };
 
-export default DropDownMenu;
+export default DropdownMenu;
