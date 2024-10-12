@@ -18,14 +18,17 @@ def compute_inverse_kurtosis(audio_amplitude_values: np.ndarray) -> float:
     return inverse_kurtosis
 
 def read_audio_file(file_path: str) -> np.ndarray:
-    data = sf.read(file_path)
+    data, samplerate = sf.read(file_path)
     if data.ndim > 1:
         # If stereo, take the mean of the two channels to convert to mono
         data = np.mean(data, axis=1)
     return data
 
-# Example usage
-file_path = 'path/to/your/audiofile.wav'
-audio_data = read_audio_file(file_path)
-inverse_kurtosis = compute_inverse_kurtosis(audio_data)
-print('Inverse Kurtosis:', inverse_kurtosis)
+def main():
+    file_path = input("Enter the path to the audio file: ")
+    audio_data = read_audio_file(file_path)
+    inverse_kurtosis = compute_inverse_kurtosis(audio_data)
+    print('Inverse Kurtosis:', inverse_kurtosis)
+
+if __name__ == '__main__':
+    main()
