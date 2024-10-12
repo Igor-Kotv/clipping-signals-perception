@@ -22,7 +22,7 @@ const DropdownItem = styled(Dropdown.Item)`
   -webkit-user-drag: none;
 `;
 
-const DropdownMenu: React.FC<Props> = ({ data, disabled }: Props) => {
+function DropdownMenu({ data, disabled }: Props) {
   const dispatch = useDispatch();
   const [selectedSampleName, setSelectedSampleName] = useState<string>(
     data[0].name
@@ -58,6 +58,6 @@ const DropdownMenu: React.FC<Props> = ({ data, disabled }: Props) => {
       </Dropdown.Menu>
     </Dropdown>
   );
-};
+}
 
 export default DropdownMenu;

@@ -1,6 +1,13 @@
+const X_AXIS = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+
 export const axis = {
-  xAxis: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+  xAxis: X_AXIS,
   yAxis: [5, 4, 3, 2, 1],
+};
+
+export const objectiveAxis = {
+  xAxis: X_AXIS,
+  yAxis: [0, 0.125, 0.25, 0.5, 1],
 };
 
 export const link = "https://igor-kotv.github.io/clipping-signals-perception/";

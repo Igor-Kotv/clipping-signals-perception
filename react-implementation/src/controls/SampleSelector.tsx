@@ -17,20 +17,20 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: #efefef;
   border: 1px solid silver;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.5em;
+  padding: 1em;
   margin: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  width: 45rem;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  width: 45em;
   user-select: none;
 `;
 
 const RadioContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
-  margin-bottom: 0.2rem;
+  gap: 0.5em;
+  margin-bottom: 0.2em;
 `;
 
 const Radio = styled.input`
@@ -42,7 +42,7 @@ const CathegoryContainer = styled.div`
   flex-direction: column;
 `;
 
-const SampleSelector = () => {
+function SampleSelector() {
   const { t } = useTranslation();
   const [sampleDuration, setSampleDuration] = useState<number>(15);
   const [musicSelected, setMusicSelected] = useState<boolean>(true);
@@ -102,6 +102,6 @@ const SampleSelector = () => {
       />
     </Container>
   );
-};
+}
 
 export default SampleSelector;

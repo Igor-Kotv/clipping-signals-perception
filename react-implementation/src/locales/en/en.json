@@ -2,7 +2,7 @@
     "root": {
         "header": "Clipped audio perception evaluation",
         "developer": "Developer: Igor Kotvytskyi, ",
-        "siteLinkText": "Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU \"Igor Sikorsky KPI\", Kyiv, Ukraine"
+        "siteLinkText": "GitHub repository"
     },
 
     "description": {
@@ -11,9 +11,10 @@
         "secondParagraph": "You have the opportunity to choose the type of sound signal, set the duration of listening signal, after which you have to listen to the signal 11 times.",
         "thirdParagraph": "Listening to the signals, you do not know in advance what degree of distortion was applied to the signal. But you hear that the signal is distorted, so you can rate this degree on a 5-point scale, setting from 5 (the signal sounds good) to 1 (the signal sounds awful) points. You can give a fractional score, for example, 3.4, which means three and four tenths.",
         "forthParagraph": "When you listen to the signal 11 times, a graph of your estimates (MOS) will be automatically plotted against the degree of distortion (the more k, the stronger the distortion).",
-        "fifthParagraph": "Finally, you can compare your chart with the average chart built from testing 35 students. You will learn how different you are from the \"average\" person."
+        "fifthParagraph": "Finally, you can compare your chart with the average chart built from testing 35 students. You will learn how different you are from the \"average\" person.",
+        "kpiSiteLinkText": "Department of Acoustic and Multimedia Electronic Systems (AMES) of NTUU \"Igor Sikorsky KPI\", Kyiv, Ukraine"
     },
-    
+
     "controls": {
         "header": "Listen and evaluate",
         "checkResult": "Check the results",
@@ -24,6 +25,4 @@
         "start": "Listen",
         "estimate": "Evaluate"
     }
-
-
 }

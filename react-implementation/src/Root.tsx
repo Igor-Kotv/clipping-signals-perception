@@ -5,146 +5,142 @@ import i18n from "i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Controls from "./controls/Controls";
 import Description from "./description/Description";
-import { StyledText } from "./common/text";
+import { Link, StyledText } from "./common/text";
 import { Dropdown } from "react-bootstrap";
 
-const headerFooterHeight = "4rem";
-const siteLink = "https://ames.kpi.ua/uk/glavnaya/";
+const headerFooterHeight = "4em";
+const siteLink = "https://github.com/Igor-Kotv/clipping-signals-perception";
 
 const Container = styled.div`
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "description controls"
-    "footer footer";
-  height: 100vh;
-  gap: 1em;
+    display: grid;
+    grid-template-rows: ${headerFooterHeight} auto;
+    max-height: 100vh;
+`;
+
+const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: calc(100vh - ${headerFooterHeight});
+    background-color: #f0f0f0;
 `;
 
 const DescriptionContainer = styled.div`
-  grid-area: description;
-  height: auto;
-  padding-left: 10em;
+    width: 100%;
+    height: auto;
 `;
 
 const ControlsContainer = styled.div`
-  grid-area: controls;
-  padding-right: 10em;
+    width: 100%;
 `;
 
 const Header = styled.div`
-  grid-area: header;
-  display: flex;
-  flex-direction: row;
-  background: #85a2b9e0;
-  justify-content: center;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0 10px 2px;
-  user-select: none;
-  height: ${headerFooterHeight};
+    display: flex;
+    flex-direction: row;
+    background: #85a2b9e0;
+    justify-content: center;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 0 10px 2px;
+    user-select: none;
+    height: ${headerFooterHeight};
+    align-items: center;
 `;
 
 const Footer = styled.div`
-  grid-area: footer;
-  background-color: #85a2b9e0;
-  height: ${headerFooterHeight};
-  text-align: center;
-  margin-top: auto;
+    display: flex;
+    background-color: #85a2b9e0;
+    height: ${headerFooterHeight};
+    justify-content: center;
+    margin-top: auto;
+    align-items: center;
 `;
 
 const HeaderText = styled.h1`
-  display: inline-block;
-  text-align: center;
-  margin: auto;
-  width: 100%;
-  color: #ffffff;
-  font-size: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 2.5em;
 `;
 
 const FooterText = styled(StyledText)`
-  text-align: center;
-  margin-bottom: 0;
-  color: #ffffff;
-  display: inline-block;
-`;
-
-const FooterLink = styled.a`
-  text-decoration: none;
-  display: inline-block;
-  color: #ffffff;
-  margin-left: 0;
-  padding-right: 3px;
-  text-indent: 5px;
-  font-size: 1.2rem;
-  :hover {
-    text-decoration: underline;
+    text-align: center;
     color: #ffffff;
-  }
+    display: inline-block;
+    font-size: 1.2em;
 `;
 
 const LanguageSelectorContainer = styled.div`
-  margin: auto;
-  margin-right: 1.5rem;
+    margin: auto;
+    margin-right: 1.5em;
 `;
 
 const LanguageSelectorMenu = styled(Dropdown.Menu)`
-  min-width: 2.5rem;
+    min-width: 2.5em;
 `;
 
 const LanguageSelectorMenuItemText = styled.span`
-  font-size: 0.8rem;
+    font-size: 0.8em;
 `;
 
 const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-  const language = ["en", "ua"];
+    const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+    const language = ["en", "ua"];
 
-  return (
-    <Dropdown>
-      <Dropdown.Toggle size="sm" variant="outline-light" id="dropdown-basic">
-        {selectedLanguage === "ua" ? "УКР" : "ENG"}
-      </Dropdown.Toggle>
-      <LanguageSelectorMenu>
-        {language.map((lang) => (
-          <Dropdown.Item
-            key={lang}
-            onClick={() => {
-              setSelectedLanguage(lang);
-              i18n.changeLanguage(lang);
-            }}
-          >
-            <LanguageSelectorMenuItemText>
-              {lang === "ua" ? "УКР" : "ENG"}
-            </LanguageSelectorMenuItemText>
-          </Dropdown.Item>
-        ))}
-      </LanguageSelectorMenu>
-    </Dropdown>
-  );
+    return (
+        <Dropdown>
+            <Dropdown.Toggle
+                size="sm"
+                variant="outline-light"
+                id="dropdown-basic"
+            >
+                {selectedLanguage === "ua" ? "УКР" : "ENG"}
+            </Dropdown.Toggle>
+            <LanguageSelectorMenu>
+                {language.map((lang) => (
+                    <Dropdown.Item
+                        key={lang}
+                        onClick={() => {
+                            setSelectedLanguage(lang);
+                            i18n.changeLanguage(lang);
+                        }}
+                    >
+                        <LanguageSelectorMenuItemText>
+                            {lang === "ua" ? "УКР" : "ENG"}
+                        </LanguageSelectorMenuItemText>
+                    </Dropdown.Item>
+                ))}
+            </LanguageSelectorMenu>
+        </Dropdown>
+    );
 };
 
 const Root = () => {
-  const { t } = useTranslation();
-  return (
-    <Container>
-      <Header>
-        <HeaderText>{t("root.header")}</HeaderText>
-        <LanguageSelectorContainer>
-          <LanguageSelector />
-        </LanguageSelectorContainer>
-      </Header>
-      <DescriptionContainer>
-        <Description />
-      </DescriptionContainer>
-      <ControlsContainer>
-        <Controls />
-      </ControlsContainer>
-      <Footer>
-        <FooterText>{t("root.developer")}</FooterText>
-        <FooterLink href={siteLink}>{t("root.siteLinkText")}</FooterLink>
-      </Footer>
-    </Container>
-  );
+    const { t } = useTranslation();
+    return (
+        <Container>
+            <Header>
+                <HeaderText>{t("root.header")}</HeaderText>
+                <LanguageSelectorContainer>
+                    <LanguageSelector />
+                </LanguageSelectorContainer>
+            </Header>
+            <ContentContainer>
+                <ControlsContainer>
+                    <Controls />
+                </ControlsContainer>
+                <DescriptionContainer>
+                    <Description />
+                </DescriptionContainer>
+                <Footer>
+                    <FooterText>{t("root.developer")}</FooterText>
+                    <Link href={siteLink} target="_blank">
+                        {t("root.siteLinkText")}
+                    </Link>
+                </Footer>
+            </ContentContainer>
+        </Container>
+    );
 };
 
 export default Root;
