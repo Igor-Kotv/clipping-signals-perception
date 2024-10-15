@@ -10,3 +10,19 @@ Listening to the signals, listener does not know in advance what degree of disto
 When listening to the signal 11 times, a graph of your estimates (MOS) will be automatically plotted against the degree of distortion (the more k, the stronger the distortion).
 
 Finally, listener can compare your chart with the average chart built from testing 35 students. 
+
+**Inverse Kurtosis Calculation**
+
+How It Works
+
+1. Reading the Audio File: The script uses the soundfile library to read the audio file and load the audio data into a NumPy array.
+
+2. Processing the Audio Data: If the audio data is stereo, it converts it to mono by averaging the two channels.
+
+3. Calculating Inverse Kurtosis: The script calculates the mean, variance, and fourth moment of the audio amplitude values. It then computes the kurtosis and its inverse to provide a measure of the signal's distortion.
+
+References
+
+For more information on using kurtosis for objective assessment of musical signals clipping degree, refer to the following article:
+
+[Using Kurtosis for Objective Assessment of the Musical Signals Clipping Degree](https://www.researchgate.net/publication/338659547_Using_Kurtosis_for_Objective_Assessment_of_the_Musical_Signals_Clipping_Degree)
